@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow: hidden;
+    background-image: url("wallpaper.png");
+    background-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: grid;
+}
+.shelf-icon {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    display: inline-block;
+}
+#desktop {
+    padding: 10px;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+.desktopIconContainer {
+    width: 75px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    max-width: 75px;
+}
+.desktopIcon {
+    width: 70px;
+    height: 70px;
+    size: 70px;
+}
+.desktopIconTitle {
+    padding: 2px;
+    border-radius: 5px;
+    max-width: 75px;
+    background-color: #464646c4;
+    font: arial;
+    color: white;
+    font-size: 11px;
+    overflow: hidden;
+    text-align: center;
+}
+#startButton {
+    background-image: url("startP.png");
+    background-size: 35px;
+    outline: none;
+    border: none;
+}
+#startButtonSec {
+    display: grid;
+    height: 45px;
+    place-items: center;
+    position: absolute;
+    left: 4px;
+}
+#startMenu {
+    position: absolute;
+    left: 4px;
+    bottom: 49px;
+    border-radius: 10px;
+    width: 300px;
+    min-height: 150px;
+    background-color: #464646c4;
+}
+#shelf {
+    width: 100%;
+    height: 45px;
+    background: #464646;
+    position: absolute;
+    bottom: 0px;
+    place-items: center;
+}
