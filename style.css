@@ -7,9 +7,12 @@ html {
     background-image: url("wallpaper.png");
     background-size: 120%;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 body {
     display: grid;
+    width: 100%;
+    overflow: hidden;
 }
 .shelf-icon {
     width: 35px;
@@ -22,6 +25,58 @@ body {
     display: grid;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
+    max-height: 93vh;
+}
+#pageFrame {
+    width: 99vw;
+    height: 89vh;
+    border: none;
+    outline: none;
+}
+.window {
+    display: grid;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: #464646ad;
+    width: 100%;
+    height: 95vh;
+    position: absolute;
+    overflow: hidden;
+    place-content: bottom;
+    padding: 2px;
+}
+#page {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 99.5vw;
+    height: 90vh;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+}
+#windowTitle {
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    left: 5px;
+    top: 5px;
+}
+#closeWindow {
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
+    z-index: 11;
+    background-color: white;
+}
+.hidden {
+    display: none;
 }
 .desktopIconContainer {
     width: 75px;
@@ -29,10 +84,14 @@ body {
     display: grid;
     place-items: center;
     max-width: 75px;
+    border-radius: 10px;
+}
+.desktopIconContainer:hover {
+    background-color: #46464677;
 }
 .desktopIcon {
-    width: 70px;
-    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
     size: 70px;
 }
 .desktopIconTitle {
@@ -67,6 +126,7 @@ body {
     width: 300px;
     min-height: 150px;
     background-color: #464646c4;
+    z-index: 9999;
 }
 #shelf {
     width: 100%;
@@ -74,5 +134,17 @@ body {
     background: #464646;
     position: absolute;
     bottom: 0px;
+    place-items: center;
+    z-index: 9999;
+}
+.shelfIcon {
+    height: 35px;
+    outline: none;
+    border: none;
+}
+.shelfIconContainer {
+    display: grid;
+    height: 45px;
+    width: 45px;
     place-items: center;
 }

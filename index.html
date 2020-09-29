@@ -8,27 +8,78 @@
 
     <body>
 
+
         <div id="desktop">
 
-            <div id="desktop-search" class="desktopIconContainer">
 
-                <img src="startP.png" class="desktopIcon" id="searchDesktopIcon">
+
+            <div id="desktop-search" class="desktopIconContainer" ondblclick="start('Search')">
+
+                <img src="searchIcon.png" class="desktopIcon" id="searchDesktopIcon">
                 <p class="desktopIconTitle">
                     Search
                 </p>
 
             </div>
 
-            <div id="desktop-search" class="desktopIconContainer">
+            <div id="desktop-calculator" ondblclick="start('Calculator')" class="desktopIconContainer">
 
-                <img src="startP.png" class="desktopIcon" id="searchDesktopIcon">
+                <img src="startP.png" class="desktopIcon" id="calculatorDesktopIcon">
                 <p class="desktopIconTitle">
-                    Placeholder
+                    Calculator
                 </p>
 
             </div>
 
+            <div id="desktop-paperclips" ondblclick="start('https:/' + '/' + 'paperclips.hmshackers.gq/index')" class="desktopIconContainer">
+
+                <img src="paperclipsIcon.png" class="desktopIcon" id="paperclipsDesktopIcon">
+                <p class="desktopIconTitle">
+                    Paperclips
+                </p>
+
+            </div>
+
+            <div id="desktop-spaceplan" ondblclick="start('https:/' + '/' + 'spaceplan.hmshackers.gq/index')" class="desktopIconContainer">
+
+                <img src="spaceplanIcon.png" class="desktopIcon" id="spaceplanDesktopIcon">
+                <p class="desktopIconTitle">
+                    Spaceplan
+                </p>
+
+            </div>
+
+
+
+        </div> 
+
+
+
+
+
+
+        <div id="windowP" class="hidden">
+
+
+            <p id="windowTitle">-PLACEHOLDER-</p>
+            <input type="button" id="closeWindow" onclick="endProcess()" value="Close">
+
+
+            <div id="page">
+
+                <iframe src="" id="pageFrame">
+                </iframe>
+
+            </div>
+
+
         </div>
+
+
+
+
+
+
         
         <div id="shelf">
 
@@ -43,6 +94,19 @@
                 </div>
 
             </div>
+
+            <div style="position: absolute; left: 55px;" class="shelfIconContainer">
+                <img src="searchIcon.png" class="shelfIcon" onclick="start('Search')">
+            </div>
+
+            <div style="position: absolute; left: 105px;" class="shelfIconContainer">
+                <img src="paperclipsIcon.png" class="shelfIcon" onclick="start('https:/' + '/' + 'paperclips.hmshackers.gq/index')">
+            </div>
+
+            <div style="position: absolute; left: 154px;" class="shelfIconContainer">
+                <img src="spaceplanIcon.png" class="shelfIcon" onclick="start('https:/' + '/' + 'spaceplan.hmshackers.gq/index')">
+            </div>
+            
 
         </div>
 
